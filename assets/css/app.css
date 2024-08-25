@@ -35,16 +35,11 @@ ul {
 }
 
 .header {
-  padding: 3rem 5rem;
+  padding: 5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
-}
-@media (min-width: 768px) {
-  .header {
-    padding: 5rem;
-  }
 }
 .header__content {
   border: 2px solid #20293D;
@@ -152,9 +147,7 @@ ul {
 }
 
 .hamburger svg {
-  /* The size of the SVG defines the overall size */
   height: 5rem;
-  /* Define the transition for transforming the SVG */
   transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -164,7 +157,6 @@ ul {
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-width: 3;
-  /* Define the transition for transforming the Stroke */
   transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1), stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
