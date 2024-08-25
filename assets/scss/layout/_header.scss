@@ -1,0 +1,154 @@
+@use '../abstracts/breakpoints' as media;
+@use '../abstracts/colors' as color;
+
+
+.header {
+    padding: 3rem 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    &__content {
+        border: 2px solid color.$secondary-color;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.411);
+        position: absolute;
+        right: 5rem;
+        z-index: -1rem;
+        padding: 2rem 3rem;
+        border-radius: 1rem;
+        transform: translateY(1rem);
+        transition: all .5s;
+        // opacity: 0; 
+        text-align: center;
+
+        @include media.smallTablets {
+            border: none;
+            box-shadow: none;
+            position: static;
+            text-align: left;
+            transform: translateY(0);
+            padding: 0;
+            display: flex;
+            align-items: center;
+            gap: 5rem;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        @include media.smallTablets {
+            flex-direction: row;
+            gap: 5rem;
+        }
+    }
+
+    &__item {
+        font-size: 1.7rem;
+
+        a {
+            color: color.$white;
+            position: relative;
+        
+            &:hover::before {
+                transform-origin: 0% 50%;
+                transform: scale3d(1, 1, 1);
+            }
+        
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: -7px;
+                height: 2px;
+                width: 100%;
+                background-color:color.$primary-color;
+                transform-origin: 100% 50%;
+                transform: scale3d(0, 1, 1);
+                transition: transform 0.3s;
+            }
+        }
+    }
+
+    &__buttons {
+        margin-top: 2.5rem;
+
+        @include media.smallTablets {
+            margin-top: 0;
+        }
+    }
+
+    &__btn-login {
+        background-color: color.$primary-color;
+        border: 2px solid color.$primary-color;
+        padding: 1.5rem;
+        border-radius: 1.5rem;
+        color: color.$white;
+        font-size: 1.5rem;
+        font-weight: 600;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.226);
+        transition: all .3s;
+
+        &:hover {
+            background-color: transparent;
+        }
+    }
+
+    &__btn-mobile {
+        position: relative;
+        z-index: 1rem;
+        
+        @include media.smallTablets {
+            display: none;
+        }
+    }
+
+    .menu-active {
+        transform: translateY(6rem);
+        opacity: 1;
+    }
+}
+
+
+/* menu hamburger */
+
+.hamburger {
+    cursor: pointer;
+}
+
+.hamburger input {
+    display: none;
+}
+
+.hamburger svg {
+    /* The size of the SVG defines the overall size */
+    height: 5rem;
+    /* Define the transition for transforming the SVG */
+    transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line {
+    fill: none;
+    stroke: color.$primary-color;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 3;
+    /* Define the transition for transforming the Stroke */
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+        stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line-top-bottom {
+    stroke-dasharray: 12 63;
+}
+
+.hamburger input:checked+svg {
+    transform: rotate(-45deg);
+}
+
+.hamburger input:checked+svg .line-top-bottom {
+    stroke-dasharray: 20 300;
+    stroke-dashoffset: -32.42;
+}
