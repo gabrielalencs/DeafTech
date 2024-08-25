@@ -9,17 +9,21 @@
     align-items: center;
     position: relative;
 
+    @include media.smallTablets {
+        padding: 5rem;
+    }
+
     &__content {
         border: 2px solid color.$secondary-color;
         box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.411);
         position: absolute;
         right: 5rem;
-        z-index: -1rem;
+        z-index: .5rem;
         padding: 2rem 3rem;
         border-radius: 1rem;
         transform: translateY(1rem);
         transition: all .5s;
-        // opacity: 0; 
+        opacity: 0; 
         text-align: center;
 
         @include media.smallTablets {
@@ -31,7 +35,8 @@
             padding: 0;
             display: flex;
             align-items: center;
-            gap: 5rem;
+            gap: 8rem;
+            opacity: 100;
         }
     }
 
@@ -42,7 +47,7 @@
 
         @include media.smallTablets {
             flex-direction: row;
-            gap: 5rem;
+            gap: 6rem;
         }
     }
 

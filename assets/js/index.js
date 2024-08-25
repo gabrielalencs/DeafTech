@@ -1,9 +1,8 @@
-// const containerMenuMobile = document.querySelector('.header__content');
-// const buttonMenuMobile = document.querySelector('.header__btn-mobile');
+// header
 
+import { toggleMenuMobile, clearMenuMobile } from "./modules/header/toggleMenu.js";
 
-// buttonMenuMobile.addEventListener('change', () => {
+const buttonMenuMobile = document.querySelector('.header__btn-mobile');
 
-//     containerMenuMobile.classList.toggle('menu-active');
-
-// });
+buttonMenuMobile.addEventListener('change', toggleMenuMobile);
+window.addEventListener('resize', clearMenuMobile);

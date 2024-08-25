@@ -41,16 +41,22 @@ ul {
   align-items: center;
   position: relative;
 }
+@media (min-width: 768px) {
+  .header {
+    padding: 5rem;
+  }
+}
 .header__content {
   border: 2px solid #20293D;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.411);
   position: absolute;
   right: 5rem;
-  z-index: -1rem;
+  z-index: 0.5rem;
   padding: 2rem 3rem;
   border-radius: 1rem;
   transform: translateY(1rem);
   transition: all 0.5s;
+  opacity: 0;
   text-align: center;
 }
 @media (min-width: 768px) {
@@ -63,7 +69,8 @@ ul {
     padding: 0;
     display: flex;
     align-items: center;
-    gap: 5rem;
+    gap: 8rem;
+    opacity: 100;
   }
 }
 .header__list {
@@ -74,7 +81,7 @@ ul {
 @media (min-width: 768px) {
   .header__list {
     flex-direction: row;
-    gap: 5rem;
+    gap: 6rem;
   }
 }
 .header__item {
