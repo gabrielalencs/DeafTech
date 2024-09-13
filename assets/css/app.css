@@ -47,22 +47,20 @@ main {
 }
 
 .bg-overlay {
-  min-height: 100vh;
+  min-height: 110vh;
   background-image: url("../images/homeImage-2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  padding-bottom: 9.5rem;
   overflow-y: hidden;
 }
 .bg-overlay::after {
   content: "";
-  min-height: 100vh;
+  min-height: 110vh;
   min-width: 100vw;
   position: absolute;
   top: 0;
   background-color: rgba(0, 0, 0, 0.795);
   z-index: 5;
-  padding-bottom: 7rem;
   overflow: hidden;
 }
 
@@ -72,23 +70,25 @@ main {
   justify-content: space-between;
   align-items: center;
   position: relative;
-  z-index: 10;
+  z-index: 20;
 }
 .header__content {
-  border: 2px solid #20293D;
+  background-color: #013177;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.411);
   position: absolute;
   right: 5rem;
-  z-index: 0.5rem;
   padding: 2rem 3rem;
   border-radius: 1rem;
   transform: translateY(1rem);
   transition: all 0.5s;
   opacity: 0;
   text-align: center;
+  z-index: 20;
+  user-select: none;
 }
 @media (min-width: 768px) {
   .header__content {
+    background-color: transparent;
     border: none;
     box-shadow: none;
     position: static;
@@ -143,8 +143,7 @@ main {
   }
 }
 .header__btn-login {
-  background-color: #013177;
-  border: 2px solid #013177;
+  background-color: #20293D;
   padding: 1.5rem;
   border-radius: 1.5rem;
   color: #fcfcff;
@@ -154,11 +153,16 @@ main {
   transition: all 0.3s;
 }
 .header__btn-login:hover {
-  background-color: transparent;
+  background-color: rgb(59, 71, 97);
+}
+@media (min-width: 768px) {
+  .header__btn-login {
+    background-color: #013177;
+  }
 }
 .header__btn-mobile {
   position: relative;
-  z-index: 1rem;
+  z-index: 20;
 }
 @media (min-width: 768px) {
   .header__btn-mobile {
@@ -167,6 +171,7 @@ main {
 }
 .header .menu-active {
   transform: translateY(6rem);
+  user-select: all;
   opacity: 1;
 }
 
