@@ -13,6 +13,8 @@ html {
 body {
   font-family: "Poppins", sans-serif;
   background-color: #161618;
+  margin-bottom: 10rem;
+  overflow-x: hidden;
 }
 
 a {
@@ -28,10 +30,40 @@ button {
   cursor: pointer;
   border: none;
   background-color: transparent;
+  font-family: "Poppins", sans-serif;
 }
 
 ul {
   list-style: none;
+}
+
+.container {
+  max-width: 121.6rem;
+  margin: 0 auto;
+}
+
+main {
+  overflow: hidden;
+}
+
+.bg-overlay {
+  min-height: 100vh;
+  background-image: url("../images/homeImage-2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 9.5rem;
+  overflow-y: hidden;
+}
+.bg-overlay::after {
+  content: "";
+  min-height: 100vh;
+  min-width: 100vw;
+  position: absolute;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.795);
+  z-index: 5;
+  padding-bottom: 7rem;
+  overflow: hidden;
 }
 
 .header {
@@ -40,6 +72,7 @@ ul {
   justify-content: space-between;
   align-items: center;
   position: relative;
+  z-index: 10;
 }
 .header__content {
   border: 2px solid #20293D;
@@ -171,6 +204,70 @@ ul {
 .hamburger input:checked + svg .line-top-bottom {
   stroke-dasharray: 20 300;
   stroke-dashoffset: -32.42;
+}
+
+.hero {
+  margin-top: 6rem;
+  color: #fcfcff;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 10;
+}
+.hero__content {
+  max-width: 75rem;
+  margin: 0 auto;
+  text-align: center;
+}
+@media (min-width: 1200px) {
+  .hero__content {
+    margin: 0;
+    text-align: left;
+  }
+}
+.hero__title {
+  font-size: 3rem;
+}
+@media (min-width: 768px) {
+  .hero__title {
+    font-size: 4rem;
+  }
+}
+@media (min-width: 1200px) {
+  .hero__title {
+    font-size: 5.5rem;
+    line-height: 7rem;
+  }
+}
+.hero__description {
+  margin-top: 3rem;
+  font-size: 1.6rem;
+  line-height: 3rem;
+}
+@media (min-width: 768px) {
+  .hero__description {
+    font-size: 1.8rem;
+    line-height: 3.5rem;
+  }
+}
+@media (min-width: 1200px) {
+  .hero__description {
+    padding-right: 15rem;
+  }
+}
+.hero__btn {
+  margin-top: 4rem;
+  background-color: #013177;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  color: #fcfcff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.226);
+  transition: all 0.3s;
+  width: 50%;
+}
+.hero__btn:hover {
+  background-color: #3b619b;
 }
 
 /*# sourceMappingURL=app.css.map */

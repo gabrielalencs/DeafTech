@@ -17,6 +17,8 @@ html {
 body {
     font-family: 'Poppins', sans-serif;
     background-color: color.$black-primary;
+    margin-bottom: 10rem;
+    overflow-x: hidden;
 }
 
 a {
@@ -32,8 +34,14 @@ button {
     cursor: pointer;
     border: none;
     background-color: transparent;
+    font-family: 'Poppins', sans-serif;
 }
 
 ul {
     list-style: none;
+}
+
+.container {
+    max-width: 121.6rem;
+    margin: 0 auto;
 }

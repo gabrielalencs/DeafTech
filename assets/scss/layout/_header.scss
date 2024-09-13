@@ -1,6 +1,32 @@
 @use '../abstracts/breakpoints' as media;
 @use '../abstracts/colors' as color;
 
+main {
+    overflow: hidden;
+}
+
+.bg-overlay {
+    min-height: 100vh;
+    background-image: url('../images/homeImage-2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 9.5rem;
+    overflow-y: hidden;
+
+    &::after {
+        content: '';
+        min-height: 100vh;
+        min-width: 100vw;
+        position: absolute;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.795);
+        z-index: 5;
+        padding-bottom: 7rem;
+        overflow: hidden;
+    }
+   
+}
+
 
 .header {
     padding: 5rem;
@@ -8,6 +34,7 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
+    z-index: 10;
     
     &__content {
         border: 2px solid color.$secondary-color;
@@ -22,7 +49,7 @@
         opacity: 0; 
         text-align: center;
 
-        @include media.smallTablets {
+        @include media.tablets {
             border: none;
             box-shadow: none;
             position: static;
@@ -41,7 +68,7 @@
         flex-direction: column;
         gap: 1.5rem;
 
-        @include media.smallTablets {
+        @include media.tablets {
             flex-direction: row;
             gap: 6rem;
         }
@@ -76,7 +103,7 @@
     &__buttons {
         margin-top: 2.5rem;
 
-        @include media.smallTablets {
+        @include media.tablets {
             margin-top: 0;
         }
     }
@@ -101,7 +128,7 @@
         position: relative;
         z-index: 1rem;
         
-        @include media.smallTablets {
+        @include media.tablets {
             display: none;
         }
     }

@@ -1,0 +1,67 @@
+@use '../abstracts/breakpoints' as media;
+@use '../abstracts/colors' as color;
+
+.hero {
+    margin-top: 6rem;
+    color: color.$white;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 10;
+
+    &__content {
+        max-width: 75rem;
+        margin: 0 auto;
+        text-align: center;
+
+
+        @include media.desktops {
+            margin: 0;
+            text-align: left;
+        }
+    }
+
+    &__title {
+        font-size: 3rem;
+
+        @include media.tablets {
+            font-size: 4rem;
+        }
+
+        @include media.desktops {
+            font-size: 5.5rem;
+            line-height: 7rem;
+        }
+    }
+
+    &__description {
+        margin-top: 3rem;
+        font-size: 1.6rem;
+        line-height: 3rem;
+
+        @include media.tablets {
+            font-size: 1.8rem;
+            line-height: 3.5rem;
+        }
+
+        @include media.desktops {
+            padding-right: 15rem;
+        }
+    }
+
+    &__btn {
+        margin-top: 4rem;
+        background-color: color.$primary-color;
+        padding: 1.5rem;
+        border-radius: 1rem;
+        color: color.$white;
+        font-size: 1.5rem;
+        font-weight: 600;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.226);
+        transition: all .3s;
+        width: 50%;
+
+        &:hover {
+            background-color: #3b619b;
+        }
+    }
+}
