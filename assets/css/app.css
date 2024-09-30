@@ -58,6 +58,11 @@ main {
     min-height: 100vh;
   }
 }
+@media (min-width: 1900px) {
+  .bg-overlay {
+    min-height: 80vh;
+  }
+}
 .bg-overlay::after {
   content: "";
   min-height: 80vh;
@@ -71,6 +76,11 @@ main {
 @media (min-width: 1200px) {
   .bg-overlay::after {
     min-height: 100vh;
+  }
+}
+@media (min-width: 1900px) {
+  .bg-overlay::after {
+    min-height: 80vh;
   }
 }
 

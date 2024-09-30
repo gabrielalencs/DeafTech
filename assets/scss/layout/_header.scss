@@ -16,6 +16,10 @@ main {
         min-height: 100vh;
     }
 
+    @include media.extraDesktops {
+        min-height: 80vh;
+    }
+
     &::after {
         content: '';
         min-height: 80vh;
@@ -28,6 +32,10 @@ main {
 
         @include media.desktops {
             min-height: 100vh;
+        }
+
+        @include media.extraDesktops {
+            min-height: 80vh;
         }
     }
 }
