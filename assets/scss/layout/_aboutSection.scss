@@ -1,0 +1,66 @@
+@use '../abstracts/breakpoints' as media;
+@use '../abstracts/colors' as color;
+
+.about {
+    margin-top: 12rem;
+    margin-bottom: 100rem;
+    padding: 4rem;
+    // background-color: red;
+    max-height: 20rem;
+
+    @include media.desktops {
+         margin-top: 30rem;
+        display: flex;
+        align-items: center;
+    }
+
+    &__content {
+        max-width: 75rem;
+        margin: 0 auto;
+
+        @include media.tablets {
+            text-align: center;
+        }
+
+        @include media.desktops {
+            text-align: left;
+            flex: 1;
+            position: relative;
+            bottom: 10rem;
+        }
+    }
+    
+    &__title {
+        font-size: 5rem;
+        line-height: 6rem;
+
+        span {
+            color: color.$primary-color;
+        }
+    }
+
+    &__description {
+        margin-top: 3rem;
+        font-size: 1.7rem;
+
+        span {
+            color: color.$secondary-color;
+            font-weight: 500;
+        }
+
+        @include media.tablets {
+            font-size: 1.8rem;
+        }
+    }
+
+    &__image {
+        display: none;
+
+        @include media.desktops {
+            display: block;
+            flex: 1;
+            position: relative;
+            bottom: 12rem;
+        }
+    }
+}

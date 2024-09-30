@@ -12,7 +12,7 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: #161618;
+  background-color: #ffffff;
   margin-bottom: 10rem;
   overflow-x: hidden;
 }
@@ -47,15 +47,20 @@ main {
 }
 
 .bg-overlay {
-  min-height: 110vh;
-  background-image: url("../images/homeImage-2.jpg");
+  min-height: 80vh;
+  background-image: url("../images/homeImage.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   overflow-y: hidden;
 }
+@media (min-width: 1200px) {
+  .bg-overlay {
+    min-height: 100vh;
+  }
+}
 .bg-overlay::after {
   content: "";
-  min-height: 110vh;
+  min-height: 80vh;
   min-width: 100vw;
   position: absolute;
   top: 0;
@@ -63,14 +68,22 @@ main {
   z-index: 5;
   overflow: hidden;
 }
+@media (min-width: 1200px) {
+  .bg-overlay::after {
+    min-height: 100vh;
+  }
+}
 
 .header {
-  padding: 5rem;
+  padding: 5rem 4rem 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
   z-index: 20;
+}
+.header__brand img {
+  width: 7rem;
 }
 .header__content {
   background-color: #013177;
@@ -116,8 +129,12 @@ main {
   font-size: 1.7rem;
 }
 .header__item a {
-  color: #fcfcff;
+  color: #ffffff;
   position: relative;
+  transition: all 0.3s;
+}
+.header__item a:hover {
+  color: #007ad4;
 }
 .header__item a:hover::before {
   transform-origin: 0% 50%;
@@ -129,7 +146,7 @@ main {
   bottom: -7px;
   height: 2px;
   width: 100%;
-  background-color: #013177;
+  background-color: #007ad4;
   transform-origin: 100% 50%;
   transform: scale3d(0, 1, 1);
   transition: transform 0.3s;
@@ -146,7 +163,7 @@ main {
   background-color: #20293D;
   padding: 1.5rem;
   border-radius: 1.5rem;
-  color: #fcfcff;
+  color: #ffffff;
   font-size: 1.5rem;
   font-weight: 600;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.226);
@@ -212,16 +229,25 @@ main {
 }
 
 .hero {
-  margin-top: 6rem;
-  color: #fcfcff;
-  padding: 0 2rem;
+  margin-top: 8rem;
+  color: #ffffff;
+  padding: 0 3rem;
   position: relative;
   z-index: 10;
+}
+@media (min-width: 768px) {
+  .hero {
+    padding: 0 4rem;
+  }
 }
 .hero__content {
   max-width: 75rem;
   margin: 0 auto;
-  text-align: center;
+}
+@media (min-width: 768px) {
+  .hero__content {
+    text-align: center;
+  }
 }
 @media (min-width: 1200px) {
   .hero__content {
@@ -240,18 +266,18 @@ main {
 @media (min-width: 1200px) {
   .hero__title {
     font-size: 5.5rem;
-    line-height: 7rem;
+    line-height: 6rem;
   }
 }
 .hero__description {
-  margin-top: 3rem;
+  margin-top: 2.5rem;
   font-size: 1.6rem;
   line-height: 3rem;
 }
 @media (min-width: 768px) {
   .hero__description {
     font-size: 1.8rem;
-    line-height: 3.5rem;
+    line-height: 3rem;
   }
 }
 @media (min-width: 1200px) {
@@ -264,15 +290,82 @@ main {
   background-color: #013177;
   padding: 1.5rem;
   border-radius: 1rem;
-  color: #fcfcff;
+  color: #ffffff;
   font-size: 1.5rem;
   font-weight: 600;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.226);
   transition: all 0.3s;
-  width: 50%;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .hero__btn {
+    width: 50%;
+  }
 }
 .hero__btn:hover {
   background-color: #3b619b;
+}
+
+.about {
+  margin-top: 12rem;
+  margin-bottom: 100rem;
+  padding: 4rem;
+  max-height: 20rem;
+}
+@media (min-width: 1200px) {
+  .about {
+    margin-top: 30rem;
+    display: flex;
+    align-items: center;
+  }
+}
+.about__content {
+  max-width: 75rem;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .about__content {
+    text-align: center;
+  }
+}
+@media (min-width: 1200px) {
+  .about__content {
+    text-align: left;
+    flex: 1;
+    position: relative;
+    bottom: 10rem;
+  }
+}
+.about__title {
+  font-size: 5rem;
+  line-height: 6rem;
+}
+.about__title span {
+  color: #013177;
+}
+.about__description {
+  margin-top: 3rem;
+  font-size: 1.7rem;
+}
+.about__description span {
+  color: #20293D;
+  font-weight: 500;
+}
+@media (min-width: 768px) {
+  .about__description {
+    font-size: 1.8rem;
+  }
+}
+.about__image {
+  display: none;
+}
+@media (min-width: 1200px) {
+  .about__image {
+    display: block;
+    flex: 1;
+    position: relative;
+    bottom: 12rem;
+  }
 }
 
 /*# sourceMappingURL=app.css.map */

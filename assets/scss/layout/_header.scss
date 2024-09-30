@@ -6,33 +6,44 @@ main {
 }
 
 .bg-overlay {
-    min-height: 110vh;
-    background-image: url('../images/homeImage-2.jpg');
+    min-height: 80vh;
+    background-image: url('../images/homeImage.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     overflow-y: hidden;
 
+    @include media.desktops {
+        min-height: 100vh;
+    }
+
     &::after {
         content: '';
-        min-height: 110vh;
+        min-height: 80vh;
         min-width: 100vw;
         position: absolute;
         top: 0;
         background-color: rgba(0, 0, 0, 0.795);
         z-index: 5;
         overflow: hidden;
+
+        @include media.desktops {
+            min-height: 100vh;
+        }
     }
-   
 }
 
 
 .header {
-    padding: 5rem;
+    padding: 5rem 4rem 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
     z-index: 20;
+
+    &__brand img {
+        width: 7rem;
+    }
     
     &__content {
         background-color: color.$primary-color;
@@ -80,6 +91,11 @@ main {
         a {
             color: color.$white;
             position: relative;
+            transition: all .3s;
+
+            &:hover {
+                color: #007ad4;
+            }
         
             &:hover::before {
                 transform-origin: 0% 50%;
@@ -92,7 +108,7 @@ main {
                 bottom: -7px;
                 height: 2px;
                 width: 100%;
-                background-color:color.$primary-color;
+                background-color: #007ad4;
                 transform-origin: 100% 50%;
                 transform: scale3d(0, 1, 1);
                 transition: transform 0.3s;
