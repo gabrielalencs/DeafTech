@@ -6,15 +6,11 @@ main {
 }
 
 .bg-overlay {
-    min-height: 80vh;
+    min-height: 100vh;
     background-image: url('../images/homeImage.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     overflow-y: hidden;
-
-    @include media.desktops {
-        min-height: 100vh;
-    }
 
     @include media.extraDesktops {
         min-height: 80vh;
@@ -22,17 +18,13 @@ main {
 
     &::after {
         content: '';
-        min-height: 80vh;
+        min-height: 100vh;
         min-width: 100vw;
         position: absolute;
         top: 0;
         background-color: rgba(0, 0, 0, 0.795);
         z-index: 5;
         overflow: hidden;
-
-        @include media.desktops {
-            min-height: 100vh;
-        }
 
         @include media.extraDesktops {
             min-height: 80vh;

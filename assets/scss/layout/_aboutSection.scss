@@ -2,10 +2,8 @@
 @use '../abstracts/colors' as color;
 
 .about {
-    margin-top: 12rem;
-    margin-bottom: 100rem;
-    padding: 4rem;
-    // background-color: red;
+    margin-top: 15rem;
+    padding: 0 4rem;
     max-height: 20rem;
 
     @include media.desktops {
@@ -31,8 +29,13 @@
     }
     
     &__title {
-        font-size: 5rem;
-        line-height: 6rem;
+        font-size: 4.5rem;
+        line-height: 5.5rem;
+
+        @include media.tablets {
+            font-size: 5rem;
+            line-height: 6rem;
+        }
 
         span {
             color: color.$primary-color;
@@ -61,6 +64,11 @@
             flex: 1;
             position: relative;
             bottom: 12rem;
+            // right: 5rem;
+
+            img {
+                width: 60rem;
+            }
         }
     }
 }

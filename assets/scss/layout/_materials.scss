@@ -1,0 +1,112 @@
+@use '../abstracts/breakpoints' as media;
+@use '../abstracts/colors' as color;
+
+.materials {
+    margin-top: 30rem;
+    padding: 0 4rem;
+
+    @include media.tablets {
+        margin-top: 20rem;
+    }
+
+    &__title {
+        font-size: 3rem;
+        line-height: 4rem;
+        width: max-content;
+
+        @include media.extraSmallDevices {
+            font-size: 4rem;
+            line-height: 5rem;
+        }
+
+        &::after {
+            content: '';
+            display: block;
+            position: relative;
+            top: .7rem;
+            width: 80%;
+            height: 3px;
+            background: linear-gradient(264.26deg, #bcceeb 0%, #4375c5 101.03%);
+        }
+    }
+
+    &__container-cards {
+        margin-top: 5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+
+        @include media.laptops {
+            flex-direction: row;
+        }
+    }
+
+    @include media.laptops {
+        .card-two p {
+            font-size: 1.67rem !important;
+        }
+    }
+
+    &__card {
+        background-color: #f5f7fa88;
+        padding: 3rem;
+        border-radius: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @include media.laptops {
+            width: 40rem;
+        }
+
+        .materials__icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #3e5b8b;
+            padding: 3rem 0;
+            border-radius: 2rem 2rem 15rem 2rem;
+
+            i {
+                font-size: 7rem;
+                color: color.$white;
+            }
+        }
+
+        .materials__content {
+            margin-top: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+
+            h3 {
+                font-size: 2.5rem;
+            }
+
+            p {
+                margin-top: 1.5rem;
+                font-size: 1.6rem;
+            }
+        }
+
+        .materials__button {
+            margin-top: 4rem;
+
+            button {
+                background-color: color.$primary-color;
+                padding: 1.5rem;
+                border-radius: 1rem;
+                color: color.$white;
+                font-size: 1.5rem;
+                font-weight: 600;
+                box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.226);
+                transition: all .3s;
+                width: 100%;
+
+                &:hover {
+                    background-color: #3b619b;
+                }
+            }
+        }
+    }
+}
