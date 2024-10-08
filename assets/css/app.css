@@ -508,7 +508,7 @@ main {
 .footer__image p {
   position: relative;
   bottom: 5rem;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   max-width: 27.5rem;
   font-weight: 500;
 }
@@ -535,13 +535,8 @@ main {
   }
 }
 .footer__infos h3 {
-  font-size: 2rem;
+  font-size: 2.4rem;
   color: #013177;
-}
-@media (min-width: 992px) {
-  .footer__infos h3 {
-    font-size: 2.4rem;
-  }
 }
 .footer__infos ul {
   margin-top: 2rem;
@@ -550,13 +545,8 @@ main {
   gap: 1rem;
 }
 .footer__infos ul li {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   cursor: pointer;
-}
-@media (min-width: 992px) {
-  .footer__infos ul li {
-    font-size: 1.8rem;
-  }
 }
 .footer__social-media {
   flex-direction: row !important;
