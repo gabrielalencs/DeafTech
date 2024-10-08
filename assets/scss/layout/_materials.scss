@@ -2,11 +2,11 @@
 @use '../abstracts/colors' as color;
 
 .materials {
-    margin-top: 30rem;
+    margin-top: 25rem;
     padding: 0 4rem;
 
     @include media.tablets {
-        margin-top: 20rem;
+        margin-top: 10rem;
     }
 
     &__title {

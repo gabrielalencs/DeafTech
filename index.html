@@ -15,7 +15,7 @@
 
 <body>
     <div class="bg-overlay">
-        <header class="header container">
+        <header class="header container" id="hero">
             <div class="header__brand">
                 <img src="assets/images/logo-4.png" alt="logo DeafTech">
             </div>
@@ -25,10 +25,10 @@
                     <nav>
                         <ul class="header__list">
                             <li class="header__item">
-                                <a href="#">Sobre</a>
+                                <a href="#about">Sobre</a>
                             </li>
                             <li class="header__item">
-                                <a href="#">Materias</a>
+                                <a href="#materials">Materias</a>
                             </li>
                             <li class="header__item">
                                 <a href="#">FAQ</a>
@@ -69,81 +69,109 @@
         </section>
     </div>
 
-    <section class="about container">
-        <div class="about__content">
-            <h2 class="about__title">O que é a <span>DeafTech</span>?</h2>
-            <p class="about__description">
-                A DeafTech é uma <span>plataforma de aprendizagem</span> de Libras voltada para o ensino por <span>meio de textos explicativos e estruturados</span>, como uma documentação. Aqui, você pode aprender os sinais e suas aplicações, com <span>exemplos e descrições detalhadas</span>, de forma clara e gratuita.
-            </p>
-        </div>
+    <main class="container" id="about">
+        <section class="about">
+            <div class="about__content">
+                <h2 class="about__title">O que é a <span>DeafTech</span>?</h2>
+                <p class="about__description">
+                    A DeafTech é uma <span>plataforma de aprendizagem</span> de Libras voltada para o ensino por <span>meio de textos explicativos e estruturados</span>, como uma documentação. Aqui, você pode aprender os sinais e suas aplicações, com <span>exemplos e descrições detalhadas</span>, de forma clara e gratuita.
+                </p>
+            </div>
+            <div class="about__image">
+                <img src="assets/images/logo-2.png" alt="">
+            </div>
+        </section>
 
-        <div class="about__image">
-            <img src="assets/images/logo-2.png" alt="">
-        </div>
-    </section>
-
-    <section class="materials container">
-        <h2 class="materials__title">Materiais de Estudo</h2>
-
-        <div class="materials__container-cards">
-            <div class="materials__card">
-                <div class="materials__main-content">
-                    <div class="materials__icon">
-                        <i class="bi bi-reception-2"></i>
+        <section class="materials" id="materials">
+            <h2 class="materials__title">Materiais de Estudo</h2>
+            <div class="materials__container-cards">
+                <div class="materials__card">
+                    <div class="materials__main-content">
+                        <div class="materials__icon">
+                            <i class="bi bi-reception-2"></i>
+                        </div>
+                        <div class="materials__content">
+                            <h3>Iniciante</h3>
+                            <p>
+                                Este material é voltado para quem está começando a aprender Libras. Aqui você encontrará conceitos como o alfabeto em libras e outros conceitos básicos essenciais para iniciar a comunicação na língua de sinais.
+                            </p>
+                        </div>
                     </div>
-
-                    <div class="materials__content">
-                        <h3>Iniciante</h3>
-                        <p>
-                            Este material é voltado para quem está começando a aprender Libras. Aqui você encontrará conceitos como o alfabeto em libras e outros conceitos básicos essenciais para iniciar a comunicação na língua de sinais.
-                        </p>
+                    <div class="materials__button">
+                        <button>Acessar material</button>
                     </div>
                 </div>
 
-                <div class="materials__button">
-                    <button>Acessar material</button>
+                <div class="materials__card card-two">
+                    <div class="materials__main-content">
+                        <div class="materials__icon">
+                            <i class="bi bi-reception-3"></i>
+                        </div>
+                        <div class="materials__content">
+                            <h3>Intermediário</h3>
+                            <p>
+                                Este material é indicado para quem já possui um conhecimento básico de Libras e deseja expandir o vocabulário, melhorar a fluência em diálogos mais complexos e situações cotidianas.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="materials__button">
+                        <button>Acessar material</button>
+                    </div>
+                </div>
+
+                <div class="materials__card">
+                    <div class="materials__main-content">
+                        <div class="materials__icon">
+                            <i class="bi bi-reception-4"></i>
+                        </div>
+                        <div class="materials__content">
+                            <h3>Avançado</h3>
+                            <p>
+                                Este material é voltado para pessoas mais avançadas na língua de sinais e que buscam aprofundar o conhecimento em Libras, abordando temas mais complexos além de expressões culturais da comunidade surda.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="materials__button">
+                        <button>Acessar material</button>
+                    </div>
                 </div>
             </div>
+        </section>
+    </main>
 
-            <div class="materials__card card-two">
-                <div class="materials__main-content">
-                    <div class="materials__icon">
-                        <i class="bi bi-reception-3"></i>
-                    </div>
-
-                    <div class="materials__content">
-                        <h3>Intermediário</h3>
-                        <p>
-                            Este material é indicado para quem já possui um conhecimento básico de Libras e deseja expandir o vocabulário, melhorar a fluência em diálogos mais complexos e situações cotidianas.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="materials__button">
-                    <button>Acessar material</button>
-                </div>
+    <footer class="footer">
+        <div class="footer__content container">
+            <div class="footer__col footer__image">
+                <img src="assets/images/logo-2.png" alt="logo deaftech">
+                <p>Plataforma de aprendizagem da <span>Língua Brasileira de Sinais</span>.</p>
             </div>
 
-            <div class="materials__card">
-                <div class="materials__main-content">
-                    <div class="materials__icon">
-                        <i class="bi bi-reception-4"></i>
-                    </div>
-
-                    <div class="materials__content">
-                        <h3>Avançado</h3>
-                        <p>
-                            Este material é voltado para pessoas mais avançadas na língua de sinais e que buscam aprofundar o conhecimento em Libras, abordando temas mais complexos além de expressões culturais da comunidade surda.
-                        </p>
-                    </div>
+            <div class="footer__infos">
+                <div class="footer__col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li>
+                            <a href="#hero">Home</a>
+                        </li>
+                        <li>
+                            <a href="#about">Sobre</a>
+                        </li>
+                        <li>
+                            <a href="#materials">Materiais</a>
+                        </li>
+                    </ul>
                 </div>
 
-                <div class="materials__button">
-                    <button>Acessar material</button>
+                <div class="footer__col">
+                    <h3>Mídias Sociais</h3>
+                    <ul class="footer__social-media">
+                        <li><i class="bi bi-facebook"></i></li>
+                        <li><i class="bi bi-instagram"></i></li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </section>
+    </footer>
 </body>
 
 </html>

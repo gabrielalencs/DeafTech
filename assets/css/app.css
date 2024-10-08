@@ -13,12 +13,12 @@ html {
 body {
   font-family: "Poppins", sans-serif;
   background-color: #ffffff;
-  margin-bottom: 10rem;
   overflow-x: hidden;
 }
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 img {
@@ -313,7 +313,7 @@ main {
 }
 @media (min-width: 1200px) {
   .about {
-    margin-top: 30rem;
+    margin-top: 25rem;
     display: flex;
     align-items: center;
   }
@@ -377,12 +377,12 @@ main {
 }
 
 .materials {
-  margin-top: 30rem;
+  margin-top: 25rem;
   padding: 0 4rem;
 }
 @media (min-width: 768px) {
   .materials {
-    margin-top: 20rem;
+    margin-top: 10rem;
   }
 }
 .materials__title {
@@ -475,6 +475,98 @@ main {
 }
 .materials__card .materials__button button:hover {
   background-color: #3b619b;
+}
+
+.footer {
+  margin-top: 20rem;
+  background-color: #e9f9ff;
+}
+.footer__content {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding: 0 4rem 5rem;
+}
+@media (min-width: 992px) {
+  .footer__content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.footer__image img {
+  width: 30rem;
+  position: relative;
+  right: 5rem;
+}
+@media (min-width: 992px) {
+  .footer__image img {
+    position: relative;
+    right: 9rem;
+  }
+}
+.footer__image p {
+  position: relative;
+  bottom: 5rem;
+  font-size: 1.6rem;
+  max-width: 27.5rem;
+  font-weight: 500;
+}
+@media (min-width: 992px) {
+  .footer__image p {
+    font-size: 1.8rem;
+  }
+}
+.footer__image p span {
+  color: #013177;
+}
+.footer__infos {
+  position: relative;
+  bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+@media (min-width: 992px) {
+  .footer__infos {
+    position: static;
+    flex-direction: row;
+    gap: 15rem;
+  }
+}
+.footer__infos h3 {
+  font-size: 2rem;
+  color: #013177;
+}
+@media (min-width: 992px) {
+  .footer__infos h3 {
+    font-size: 2.4rem;
+  }
+}
+.footer__infos ul {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.footer__infos ul li {
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+@media (min-width: 992px) {
+  .footer__infos ul li {
+    font-size: 1.8rem;
+  }
+}
+.footer__social-media {
+  flex-direction: row !important;
+  gap: 2rem !important;
+}
+.footer__social-media li {
+  background-color: #20293D;
+  padding: 0.5rem 1rem;
+  border-radius: 50%;
+  color: #fff;
 }
 
 /*# sourceMappingURL=app.css.map */

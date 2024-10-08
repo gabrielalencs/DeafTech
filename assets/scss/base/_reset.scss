@@ -17,12 +17,12 @@ html {
 body {
     font-family: 'Poppins', sans-serif;
     background-color: color.$white;
-    margin-bottom: 10rem;
     overflow-x: hidden;
 }
 
 a {
     text-decoration: none;
+    color: inherit;
 }
 
 img {
