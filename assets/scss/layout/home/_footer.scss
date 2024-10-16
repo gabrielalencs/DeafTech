@@ -1,6 +1,5 @@
-@use '../abstracts/breakpoints' as media;
-@use '../abstracts/colors' as color;
-
+@use '../../abstracts/breakpoints' as media;
+@use '../../abstracts/colors' as color;
 .footer {
     margin-top: 20rem;
     background-color: #e9f9ff;

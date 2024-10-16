@@ -1,0 +1,199 @@
+@use '../../abstracts/breakpoints' as media;
+@use '../../abstracts/colors' as color;
+
+main {
+    overflow: hidden;
+}
+
+.bg-overlay {
+    min-height: 100vh;
+    background-image: url('../images/homeImage.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-y: hidden;
+
+    @include media.extraDesktops {
+        min-height: 80vh;
+    }
+
+    &::after {
+        content: '';
+        min-height: 100vh;
+        min-width: 100vw;
+        position: absolute;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.795);
+        z-index: 5;
+        overflow: hidden;
+
+        @include media.extraDesktops {
+            min-height: 80vh;
+        }
+    }
+}
+
+
+.header {
+    padding: 5rem 4rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 20;
+
+    &__brand img {
+        width: 7rem;
+    }
+    
+    &__content {
+        background-color: color.$primary-color;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.411);
+        position: absolute;
+        right: 5rem;
+        padding: 2rem 3rem;
+        border-radius: 1rem;
+        transform: translateY(1rem);
+        transition: all .5s;
+        opacity: 0; 
+        text-align: center;
+        z-index: 20;
+        user-select: none;
+
+        @include media.tablets {
+            background-color: transparent;
+            border: none;
+            box-shadow: none;
+            position: static;
+            text-align: left;
+            transform: translateY(0);
+            padding: 0;
+            display: flex;
+            align-items: center;
+            gap: 8rem;
+            opacity: 100;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        @include media.tablets {
+            flex-direction: row;
+            gap: 6rem;
+        }
+    }
+
+    &__item {
+        font-size: 1.7rem;
+
+        a {
+            color: color.$white;
+            position: relative;
+            transition: all .3s;
+
+            &:hover {
+                color: #007ad4;
+            }
+        
+            &:hover::before {
+                transform-origin: 0% 50%;
+                transform: scale3d(1, 1, 1);
+            }
+        
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: -7px;
+                height: 2px;
+                width: 100%;
+                background-color: #007ad4;
+                transform-origin: 100% 50%;
+                transform: scale3d(0, 1, 1);
+                transition: transform 0.3s;
+            }
+        }
+    }
+
+    &__buttons {
+        margin-top: 2.5rem;
+
+        @include media.tablets {
+            margin-top: 0;
+        }
+    }
+
+    &__btn-login {
+        background-color: color.$secondary-color;
+        padding: 1.5rem;
+        border-radius: 1.5rem;
+        color: color.$white;
+        font-size: 1.5rem;
+        font-weight: 600;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.226);
+        transition: all .3s;
+
+        &:hover {
+            background-color: rgb(59, 71, 97);
+        }
+
+        @include media.tablets {
+            background-color: color.$primary-color;
+        }
+    }
+
+    &__btn-mobile {
+        position: relative;
+        z-index: 20;
+        
+        @include media.tablets {
+            display: none;
+        }
+    }
+
+    .menu-active {
+        transform: translateY(6rem);
+        user-select: all;
+        opacity: 1;
+    }
+}
+
+
+/* menu hamburger */
+
+.hamburger {
+    cursor: pointer;
+}
+
+.hamburger input {
+    display: none;
+}
+
+.hamburger svg {
+    height: 5rem;
+    transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line {
+    fill: none;
+    stroke: color.$primary-color;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 3;
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+        stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line-top-bottom {
+    stroke-dasharray: 12 63;
+}
+
+.hamburger input:checked+svg {
+    transform: rotate(-45deg);
+}
+
+.hamburger input:checked+svg .line-top-bottom {
+    stroke-dasharray: 20 300;
+    stroke-dashoffset: -32.42;
+}

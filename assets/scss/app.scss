@@ -2,8 +2,8 @@
 @use 'base/reset';
 
 // layout
-@use 'layout/header';
-@use 'layout/hero';
-@use 'layout/aboutSection';
-@use 'layout/materials';
-@use 'layout/footer';
+@use 'layout/home/header';
+@use 'layout/home/hero';
+@use 'layout/home/aboutSection';
+@use 'layout/home/materialsSection';
+@use 'layout/home/footer';

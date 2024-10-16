@@ -287,6 +287,7 @@ main {
 }
 .hero__btn {
   margin-top: 4rem;
+  display: inline-block;
   background-color: #013177;
   padding: 1.5rem;
   border-radius: 1rem;
@@ -296,6 +297,7 @@ main {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.226);
   transition: all 0.3s;
   width: 100%;
+  text-align: center;
 }
 @media (min-width: 768px) {
   .hero__btn {
