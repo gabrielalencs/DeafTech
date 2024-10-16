@@ -14,7 +14,7 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: #ffffff;
   overflow-x: hidden;
-  background-color: #fff;
+  background-color: #1B1B1B;
 }
 
 a {
@@ -44,7 +44,7 @@ ul {
 }
 
 .header-materials {
-  background-color: #f8f7ff;
+  background-color: #292929;
 }
 .header-materials .container {
   padding: 3rem;
@@ -101,11 +101,6 @@ ul {
   color: #ffffff;
   position: relative;
   transition: all 0.3s;
-}
-@media (min-width: 768px) {
-  .header-materials__item {
-    color: #161618;
-  }
 }
 .header-materials__item:hover {
   color: #007ad4;

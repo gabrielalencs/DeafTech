@@ -2,7 +2,8 @@
 @use '../../abstracts/colors' as color;
 
 .header-materials {
-    background-color: #f8f7ff;
+    // background-color: #f8f7ff;  modo claro
+    background-color: #292929;
 
     .container {
         padding: 3rem;
@@ -61,10 +62,6 @@
         color: color.$white;
         position: relative;
         transition: all .3s;
-
-        @include media.tablets {
-            color: color.$black-primary;
-        }
     
         &:hover {
             color: #007ad4;
