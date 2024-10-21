@@ -34,6 +34,19 @@ button {
   font-family: "Poppins", sans-serif;
 }
 
+.main-wrapper {
+  margin-top: 5rem !important;
+  display: grid;
+  padding: 0 3rem;
+  gap: 8rem;
+  margin-bottom: 100000rem !important;
+}
+@media (min-width: 768px) {
+  .main-wrapper {
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 3fr);
+  }
+}
+
 ul {
   list-style: none;
 }
@@ -45,6 +58,7 @@ ul {
 
 .header-materials {
   background-color: #292929;
+  border-bottom: 1px solid #858585;
 }
 .header-materials .container {
   padding: 3rem;
@@ -195,6 +209,14 @@ ul {
 .hamburger input:checked + svg .line-top-bottom {
   stroke-dasharray: 20 300;
   stroke-dashoffset: -32.42;
+}
+
+.container-topics {
+  position: sticky;
+  top: 0;
+  left: 0;
+  border-right: 1px solid #858585;
+  height: 100vh;
 }
 
 /*# sourceMappingURL=appMaterials.css.map */

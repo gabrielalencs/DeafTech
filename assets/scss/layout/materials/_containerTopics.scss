@@ -1,0 +1,10 @@
+@use '../../abstracts/breakpoints' as media;
+@use '../../abstracts/colors' as color;
+
+.container-topics {
+    position: sticky;
+    top: 0;
+    left: 0;
+    border-right: 1px solid #858585;
+    height: 100vh;
+}
