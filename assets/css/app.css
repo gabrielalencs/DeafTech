@@ -457,9 +457,21 @@ main {
 .materials__card .materials__content h3 {
   font-size: 2.5rem;
 }
-.materials__card .materials__content p {
-  margin-top: 1.5rem;
-  font-size: 1.6rem;
+.materials__card .materials__content ul {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.materials__card .materials__content ul i {
+  font-size: 2rem;
+  color: #013177;
+}
+.materials__card .materials__content ul li {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  font-size: 1.5rem;
 }
 .materials__card .materials__button {
   margin-top: 4rem;
