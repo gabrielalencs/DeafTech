@@ -17,7 +17,7 @@
     &__brand img {
         width: 7rem;
     }
-    
+
     &__content {
         background-color: color.$primary-color;
         box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.411);
@@ -27,7 +27,7 @@
         border-radius: 1rem;
         transform: translateY(1rem);
         transition: all .5s;
-        opacity: 0; 
+        opacity: 0;
         text-align: center;
         z-index: 20;
         user-select: none;
@@ -63,16 +63,16 @@
         color: color.$white;
         position: relative;
         transition: all .3s;
-    
+
         &:hover {
             color: #007ad4;
         }
-    
+
         &:hover::before {
             transform-origin: 0% 50%;
             transform: scale3d(1, 1, 1);
         }
-    
+
         &::before {
             content: '';
             position: absolute;
@@ -116,7 +116,7 @@
     &__btn-mobile {
         position: relative;
         z-index: 20;
-        
+
         @include media.tablets {
             display: none;
         }
@@ -166,4 +166,73 @@
 .hamburger input:checked+svg .line-top-bottom {
     stroke-dasharray: 20 300;
     stroke-dashoffset: -32.42;
+}
+
+// button dark mode
+
+.toggle-switch {
+    margin-top: 2rem;
+    position: relative;
+    width: 100px;
+    height: 50px;
+    --light: #d8dbe0;
+    --dark: #28292c;
+    --link: rgb(27, 129, 112);
+    --link-hover: rgb(24, 94, 82);
+
+    @include media.tablets {
+        margin-top: 0;
+    }
+}
+
+.switch-label {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #1d1d1d;
+    border-radius: 25px;
+    cursor: pointer;
+    border: 3px solid var(--dark);
+}
+
+.checkbox {
+    position: absolute;
+    display: none;
+}
+
+.slider {
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.checkbox:checked~.slider {
+    background-color: var(--light);
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    -webkit-box-shadow: inset 12px -4px 0px 0px var(--light);
+    box-shadow: inset 12px -4px 0px 0px var(--light);
+    background-color: #1d1d1d;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.checkbox:checked~.slider::before {
+    -webkit-transform: translateX(50px);
+    -ms-transform: translateX(50px);
+    transform: translateX(50px);
+    background-color: #FFFF00;
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
