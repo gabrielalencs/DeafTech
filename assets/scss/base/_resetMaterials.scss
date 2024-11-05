@@ -40,18 +40,6 @@ button {
     font-family: 'Poppins', sans-serif;
 }
 
-.main-wrapper {
-    margin-top: 5rem !important;
-    display: grid;
-    padding: 0 3rem;
-    gap: 8rem;
-    margin-bottom: 100000rem !important;
-
-    @include media.tablets {
-        grid-template-columns: minmax(0, .8fr) minmax(0, 3fr);
-    }
-}
-
 ul {
     list-style: none;
 }
