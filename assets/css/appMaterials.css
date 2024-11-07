@@ -271,7 +271,7 @@ ul {
   display: grid;
   padding: 0 3rem;
   gap: 5rem;
-  margin-bottom: 100000rem !important;
+  margin-bottom: 10rem !important;
 }
 @media (min-width: 768px) {
   .main-wrapper {
@@ -335,15 +335,64 @@ ul {
 .container-topics .container-levels .subtopics__list li:hover {
   text-decoration: underline;
 }
+.container-topics .container-levels .subtopics__list a {
+  display: inline-block;
+  width: 100%;
+}
 .container-topics .container-levels .show-subtopics {
   display: flex !important;
 }
 .container-topics .container-levels .active-topic {
   background-color: #013177;
   border-left: 5px solid #0041a3;
+  padding-left: 1rem;
 }
 .container-topics .container-levels .triangle-rotate::before {
   transform: rotate(90deg) !important;
+}
+
+.material-alfabeto .content-title {
+  font-size: 3rem;
+  color: #fff;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 2rem;
+}
+.material-alfabeto .video-alfabeto {
+  margin-top: 3rem;
+}
+.material-alfabeto .video-alfabeto p {
+  font-size: 1.6rem;
+  width: 90%;
+  color: #fff;
+}
+.material-alfabeto .video-alfabeto video {
+  margin-top: 3rem;
+  width: 100%;
+  max-width: 46.2rem;
+  border: 1px solid #ccc;
+}
+.material-alfabeto .letter-description {
+  margin-top: 12rem;
+}
+.material-alfabeto .letter-description .letter-content {
+  margin-top: 10rem;
+}
+.material-alfabeto .letter-description .letter-title {
+  font-size: 3.5rem;
+  color: #fff;
+  font-weight: 500;
+  width: max-content;
+}
+.material-alfabeto .letter-description .letter-text {
+  margin-top: 1.5rem;
+  font-size: 1.6rem;
+  color: #e9e9e9;
+  width: 85%;
+  line-height: 2.8rem;
+}
+.material-alfabeto .letter-description .letter-image {
+  margin-top: 3rem;
+  width: 40%;
 }
 
 /*# sourceMappingURL=appMaterials.css.map */
