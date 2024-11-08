@@ -43,22 +43,30 @@ subtopicLinks.forEach(link => {
 
 const containerMaterial = document.querySelector('.container-material');
 
-async function getMaterials(path) {
+let materialsLoaded = {
+    'alfabeto': false,
+    'perguntas-comuns': false
+};
+
+async function getMaterials(path, key) {
+    if (materialsLoaded[key]) return;  
+    
     const response = await fetch(path);
     const jsonData = await response.json();
+
+    materialsLoaded[key] = true;
     
     let contentHTML = jsonData.material;
-    
     containerMaterial.innerHTML = contentHTML;
 }
 
 // Beginner Topics
 
 const topicAlphabet = document.getElementById('topic-alphabet');
-topicAlphabet.addEventListener('click', () => getMaterials('./assets/data/topicos-iniciantes/alfabeto.json'));
+topicAlphabet.addEventListener('click', () => getMaterials('./assets/data/topicos-iniciantes/alfabeto.json', 'alfabeto'));
 
 
 // Intermediate Topics
 
 const topicCommonQuestions = document.getElementById('topic-common-questions');
-topicCommonQuestions.addEventListener('click', () => getMaterials('./assets/data/topicos-intermediarios/perguntas-comuns.json'));
+topicCommonQuestions.addEventListener('click', () => getMaterials('./assets/data/topicos-intermediarios/perguntas-comuns.json', 'perguntas-comuns'));
