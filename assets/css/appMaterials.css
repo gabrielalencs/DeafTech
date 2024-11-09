@@ -369,54 +369,53 @@ ul {
   margin-top: 1.5rem;
   font-size: 1.6rem;
   color: #e9e9e9;
-  width: 85%;
+  width: 90%;
   line-height: 2.8rem;
 }
 
 .content-video,
 .content-image {
   margin-top: 3rem;
-  width: 40%;
+  display: inline-block;
+  width: 40% !important;
 }
 
-.material-alfabeto .video-alfabeto {
+.content-description {
+  margin-top: 12rem;
+}
+.content-description .content-container {
+  margin-top: 10rem;
+}
+
+.video {
   margin-top: 3rem;
 }
-.material-alfabeto .video-alfabeto p {
+.video p {
   font-size: 1.6rem;
   width: 90%;
   color: #fff;
 }
-.material-alfabeto .video-alfabeto video {
+.video video {
   margin-top: 3rem;
   width: 100%;
   max-width: 46.2rem;
-}
-.material-alfabeto .letter-description {
-  margin-top: 12rem;
-}
-.material-alfabeto .letter-description .letter-content {
-  margin-top: 10rem;
 }
 
-.material-perguntas-comuns .video-perguntas-comuns {
-  margin-top: 3rem;
+.loading {
+  text-align: center;
 }
-.material-perguntas-comuns .video-perguntas-comuns p {
-  font-size: 1.6rem;
-  width: 80%;
+.loading i {
+  font-size: 7rem;
   color: #fff;
 }
-.material-perguntas-comuns .video-perguntas-comuns video {
-  margin-top: 3rem;
-  width: 100%;
-  max-width: 46.2rem;
+.loading i::before {
+  animation: spin 1s linear infinite;
 }
-.material-perguntas-comuns .questions-description {
-  margin-top: 12rem;
-}
-.material-perguntas-comuns .questions-description .question-content {
-  margin-top: 10rem;
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /*# sourceMappingURL=appMaterials.css.map */
