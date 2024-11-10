@@ -52,7 +52,7 @@ subtopicLinks.forEach(link => {
 
 // Aside - Content
 
-const containerMaterial = document.querySelector('.container-material');
+const containerMaterial = document.querySelector('.main-content');
 
 let materialsLoaded = {
     'alfabeto': false,
@@ -67,18 +67,20 @@ const loadingContainer = document.querySelector('.loading');
 
 async function getMaterials(path, key) {
     if (materialsLoaded[key] && lastTopic === key) return;
-    loadingContainer.style.display = 'true';
+
+    window.scrollTo(0, 0)
+    containerMaterial.innerHTML = '';
+    loadingContainer.style.display = 'block';
 
     const response = await fetch(path);
     const jsonData = await response.json();
 
     materialsLoaded[key] = true;
     lastTopic = key;
+    loadingContainer.style.display = 'none';
 
     let contentHTML = jsonData.material;
     containerMaterial.innerHTML = contentHTML;
-
-    loadingContainer.style.display = 'none';
 }
 
 // Beginner Topics

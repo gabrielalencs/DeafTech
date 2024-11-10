@@ -380,6 +380,11 @@ ul {
   width: 40% !important;
 }
 
+.content-video {
+  width: 50% !important;
+  height: 46.2rem;
+}
+
 .content-description {
   margin-top: 12rem;
 }
@@ -399,10 +404,12 @@ ul {
   margin-top: 3rem;
   width: 100%;
   max-width: 46.2rem;
+  height: 46.2rem;
 }
 
 .loading {
   text-align: center;
+  display: none;
 }
 .loading i {
   font-size: 7rem;
