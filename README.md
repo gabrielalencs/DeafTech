@@ -1,19 +1,7 @@
-colors
+- Para executar o projeto, precisa de um servidor
 
-#013177 - primary
+- Então pode baixar a extensão do visual studio code chamada "Live Server" e executar o arquivo html com ele
 
-#20293D - secondary
+- Ou acessar o site hospedado pelo link: https://regal-sfogliatella-1e4c5e.netlify.app/
 
-
-
-templates
-
-https://librasmais.com.br
-
-https://www.ev.org.br/
-
-https://br.pinterest.com/pin/540009811585013574/
-
-https://br.pinterest.com/pin/836051118350850165/
-
-https://denesdesign.com/site-libras-no-seu-video/
+- Ainda falta desenvolvermos os tópicos restantes e outros ajustes
