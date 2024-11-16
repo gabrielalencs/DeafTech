@@ -134,17 +134,29 @@
     width: 40% !important;
 }
 
+.content-image {
+    width: 70% !important;
+}
 
 .content-video {
-    width: 50% !important;
+    margin-top: 2rem;
+    width: 75% !important;
     height: 46.2rem;
 }
 
 .content-description {
     margin-top: 12rem;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 5rem;
+    row-gap: 10rem;
+}
 
-    .content-container {
-        margin-top: 10rem;
+.material-saudacoes {
+
+    .content-video {
+        position: relative;
+        bottom: 5rem;
     }
 }
 
