@@ -48,6 +48,7 @@ main {
 
 .bg-overlay {
   min-height: 100vh;
+  min-width: 100vw;
   background-image: url("../images/homeImage.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -571,6 +572,90 @@ main {
   padding: 0.5rem 1rem;
   border-radius: 50%;
   color: #fff;
+}
+
+.container-login {
+  background-color: rgba(0, 0, 5, 0.459);
+  backdrop-filter: blur(1rem);
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+}
+.container-login .title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+.container-login .title-row h1 {
+  font-size: 3rem;
+}
+.container-login .title-row i {
+  font-size: 3rem;
+  cursor: pointer;
+}
+.container-login .login {
+  position: absolute;
+  width: 40rem;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid #013177;
+  padding: 5rem 3rem 3rem;
+  border-radius: 2rem;
+  color: #ffffff;
+}
+.container-login .login-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.container-login .login-row input {
+  width: 100%;
+  height: 4rem;
+  display: inline-block;
+  border: none;
+  padding-left: 1rem;
+  background-color: rgba(4, 0, 43, 0.2549019608);
+  border: 2px solid #2e486e;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+.container-login .login-row input:focus {
+  outline: none;
+}
+.container-login .login-row input::placeholder {
+  color: #dfdfdf;
+}
+.container-login .login-icon {
+  background-color: #1d3353;
+  padding: 0.5rem 1rem;
+  font-size: 2rem;
+  color: #fff;
+}
+.container-login .login-buttons {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.container-login .login-buttons button {
+  width: 100%;
+  background-color: #013177;
+  padding: 1.2rem;
+  color: #fff;
+  border-radius: 0.5rem;
+}
+.container-login .btn-register button {
+  border: 2px solid #013177;
+  background-color: transparent !important;
+}
+
+.hidden-login {
+  display: none !important;
 }
 
 /*# sourceMappingURL=app.css.map */
