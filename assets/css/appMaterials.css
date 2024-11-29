@@ -418,6 +418,38 @@ ul {
   height: 46.2rem;
 }
 
+.dark-mode header {
+  background-color: #FFFFFF !important;
+}
+
+.dark-mode {
+  background-color: #FAFAFA !important;
+}
+
+.dark-mode p {
+  color: #1B1B1B !important;
+}
+
+.dark-mode h1 {
+  color: #1B1B1B !important;
+}
+
+.dark-mode h2 {
+  color: #1B1B1B !important;
+}
+
+.dark-mode h3 {
+  color: #1B1B1B !important;
+}
+
+.dark-mode span {
+  color: #1B1B1B !important;
+}
+
+.dark-mode li {
+  color: #1B1B1B !important;
+}
+
 .loading {
   text-align: center;
   display: none;

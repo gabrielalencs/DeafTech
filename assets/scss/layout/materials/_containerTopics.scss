@@ -127,7 +127,7 @@
     line-height: 2.8rem;
 }
 
-.content-video, 
+.content-video,
 .content-image {
     margin-top: 3rem;
     display: inline-block;
@@ -178,6 +178,38 @@
     }
 }
 
+.dark-mode header {
+    background-color: #FFFFFF !important;
+}
+
+.dark-mode  {
+    background-color: #FAFAFA !important;
+}
+
+.dark-mode p {
+    color: #1B1B1B !important;
+}
+
+.dark-mode h1 {
+    color: #1B1B1B !important;
+}
+
+.dark-mode h2 {
+    color: #1B1B1B !important;
+}
+
+.dark-mode h3 {
+    color: #1B1B1B !important;
+}
+
+.dark-mode span {
+    color: #1B1B1B !important;
+}
+
+.dark-mode li {
+    color: #1B1B1B !important;
+}
+
 
 .loading {
     text-align: center;
@@ -194,5 +226,7 @@
 }
 
 @keyframes spin {
-    to { transform: rotate(360deg); }
+    to {
+        transform: rotate(360deg);
+    }
 }

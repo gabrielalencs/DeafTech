@@ -45,7 +45,7 @@ main {
     &__brand img {
         width: 7rem;
     }
-    
+
     &__content {
         background-color: color.$primary-color;
         box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.411);
@@ -55,7 +55,7 @@ main {
         border-radius: 1rem;
         transform: translateY(1rem);
         transition: all .5s;
-        opacity: 0; 
+        opacity: 0;
         text-align: center;
         z-index: 20;
         user-select: none;
@@ -70,7 +70,7 @@ main {
             padding: 0;
             display: flex;
             align-items: center;
-            gap: 8rem;
+            gap: 10rem;
             opacity: 100;
         }
     }
@@ -97,12 +97,12 @@ main {
             &:hover {
                 color: #007ad4;
             }
-        
+
             &:hover::before {
                 transform-origin: 0% 50%;
                 transform: scale3d(1, 1, 1);
             }
-        
+
             &::before {
                 content: '';
                 position: absolute;
@@ -119,13 +119,70 @@ main {
 
     &__buttons {
         margin-top: 2.5rem;
+        display: flex;
+        align-items: center;
+        gap: 2rem;
 
         @include media.tablets {
             margin-top: 0;
         }
+
+        button {
+            min-width: 11rem;
+            background-color: color.$secondary-color;
+            padding: 1.5rem;
+            border-radius: 1.5rem;
+            color: color.$white;
+            font-size: 1.5rem;
+            font-weight: 600;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.226);
+            transition: all .3s;
+
+            &:hover {
+                background-color: rgb(59, 71, 97);
+            }
+
+            @include media.tablets {
+                background-color: color.$primary-color;
+            }
+        }
     }
 
-    &__btn-login {
+    &__btn-register {
+        background-color: color.$secondary-color;
+    }
+
+    &__btn-mobile {
+        position: relative;
+        z-index: 20;
+
+        @include media.tablets {
+            display: none;
+        }
+    }
+
+    .menu-active {
+        transform: translateY(6rem);
+        user-select: all;
+        opacity: 1;
+    }
+
+}
+
+.login-user {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+
+
+    .user-name p {
+        font-size: 1.8rem;
+        text-decoration: underline;
+        color: #fff;
+    }
+
+    button {
+        min-width: 11rem;
         background-color: color.$secondary-color;
         padding: 1.5rem;
         border-radius: 1.5rem;
@@ -142,21 +199,6 @@ main {
         @include media.tablets {
             background-color: color.$primary-color;
         }
-    }
-
-    &__btn-mobile {
-        position: relative;
-        z-index: 20;
-        
-        @include media.tablets {
-            display: none;
-        }
-    }
-
-    .menu-active {
-        transform: translateY(6rem);
-        user-select: all;
-        opacity: 1;
     }
 }
 

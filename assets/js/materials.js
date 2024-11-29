@@ -49,6 +49,37 @@ subtopicLinks.forEach(link => {
     });
 });
 
+const toggleSwitch = document.querySelector('.checkbox');
+
+// Função para ativar/desativar o modo escuro
+function toggleDarkMode() {
+    if (toggleSwitch.checked) {
+        document.body.classList.add('dark-mode');
+        localStorage.setItem('darkMode', 'enabled');
+    } else {
+        document.body.classList.remove('dark-mode');
+        localStorage.setItem('darkMode', 'disabled');
+    }
+}
+
+// Carregar o estado do Dark Mode ao iniciar a página
+function loadDarkModePreference() {
+    const darkMode = localStorage.getItem('darkMode');
+    if (darkMode === 'enabled') {
+        document.body.classList.add('dark-mode');
+        toggleSwitch.checked = true;
+    } else {
+        document.body.classList.remove('dark-mode');
+        toggleSwitch.checked = false;
+    }
+}
+
+// Evento para ativar/desativar o Dark Mode ao alternar o checkbox
+toggleSwitch.addEventListener('change', toggleDarkMode);
+
+// Carregar a preferência ao carregar a página
+loadDarkModePreference();
+
 
 // Aside - Content
 
